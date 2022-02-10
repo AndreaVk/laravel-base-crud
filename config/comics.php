@@ -19,7 +19,7 @@ return [
         "price" => "3.99",
         "series" => "American Vampire 1976",
         "sale_date" => "2020-10-06",
-        "type" => "comic book"
+        "type" => "graphic novel"
     ],
     [
         "id"=> "3",
@@ -59,7 +59,7 @@ return [
         "price" => "2.99",
         "series" => "Batman Beyond",
         "sale_date" => "2016-10-26",
-        "type" => "comic book"
+        "type" => "graphic novel"
     ],
     [
         "id"=> "7",

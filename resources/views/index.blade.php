@@ -2,7 +2,8 @@
 
 @section('pageContent')
 <h1>Lista Comics</h1>
-<table class="table">
+<a href="{{route("comics.create")}}"><button type="submit" class="btn btn-primary">Create New Comic</button></a>
+<table class="table mt-5">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -10,6 +11,7 @@
             <th scope="col">Descrizione</th>
             <th scope="col">Prezzo</th>
             <th scope="col">Serie</th>
+            <th scope="col">Click</th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +22,9 @@
             <td>{{$item["description"]}}</td>
             <td>{{$item["price"]}}</td>
             <td>{{$item["series"]}}</td>
+            <td>
+                <a href="{{route("comics.show", $item["id"])}}"><button type="button" class="btn btn-primary">Visualizza</button></a>
+            </td>
         </tr>
     @endforeach
     </tbody>
