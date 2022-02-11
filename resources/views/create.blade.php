@@ -2,10 +2,14 @@
 
 @section('pageContent')
 <h1>Inserisci un nuovo Comic</h1>
-<form>
-  <div class="form-group">
-    <label for="Comic-Search">Insert here new Comic</label>
-    <input type="text" class="form-control" id="Comic-Search" name="title" placeholder="Insert here">
+<div>
+    <a href="{{route("comics.index")}}"><button type="button" class="btn btn-primary">Ritorna alla Lista</button></a>  
+</div>
+<form action="{{route("comics.store")}}" method="POST">
+  @csrf
+  <div class="form-group mt-5">
+    <label for="title">Insert here new Comic</label>
+    <input type="text" class="form-control" id="title" name="title" placeholder="Insert here">
   </div>
   <div class="form-group">
     <label for="type">Comic Type</label>
