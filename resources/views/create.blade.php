@@ -1,34 +1,40 @@
 @extends('layouts.base')
 
 @section('pageContent')
-<h1>Inserisci un nuovo Comic</h1>
-<div>
-    <a href="{{route("comics.index")}}"><button type="button" class="btn btn-primary">Ritorna alla Lista</button></a>  
-</div>
-<form action="{{route("comics.store")}}" method="POST">
-  @csrf
-  <div class="form-group mt-5">
-    <label for="title">Insert here new Comic</label>
-    <input type="text" class="form-control" id="title" name="title" placeholder="Insert here">
-  </div>
+    
+    <div class="container">
+    <h1 class="text-center my-2">Crea un nuovo fumetto</h1>
+    <form action="{{route("comics.store")}}" method="POST">
+        @csrf
   <div class="form-group">
-    <label for="type">Comic Type</label>
-    <select class="form-control form-control-md" id="type" name="type">
-  <option value="comic-book">Comic Book</option>
-  <option value="graphic-novel">Graphic Novel</option>
-</select>
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" placeholder="Title" name="title">
   </div>
-  <div class="form-group">
-  <label for="description">Description</label>
-  <textarea class="form-control" placeholder="Leave the description here" id="description" name="description" rows="7"></textarea>
+    <div class="form-group">
+    <label for="sale_date">Sale date</label>
+    <input type="text" class="form-control" id="sale_date" placeholder="Sale date" name="sale_date">
+  </div>
+    <div class="form-group">
+    <label for="thumb">Thumb</label>
+    <input type="text" class="form-control" id="thumb" placeholder="Inserisci l'immagine" name="thumb">
+  </div>
+      <div class="form-group">
+    <label for="description">description</label>
+    <input type="text" class="form-control" id="description" placeholder="Inserisci l'immagine" name="description">
+  </div>
+      <div class="form-group">
+    <label for="series">series</label>
+    <input type="text" class="form-control" id="series" placeholder="Inserisci l'immagine" name="series">
+  </div>
+      <div class="form-group">
+    <label for="type">type</label>
+    <input type="text" class="form-control" id="type" placeholder="Inserisci l'immagine" name="type">
+  </div>
+      <label for="price">price</label>
+    <input type="number" class="form-control" id="price" placeholder="Inserisci il prezzo" name="price">
+  </div>
   
-</div>
-<div class="form-group">
-  <label for="thumb">Image</label>
-  <textarea class="form-control" placeholder="Enter the url of the image here" id="thumb" name="thumb"></textarea>
-  
-</div>
-
-  <button type="submit" class="btn btn-primary">Create New Comic</button>
+  <button type="submit" class="btn btn-danger mx-2 mt-5">Create</button>
 </form>
+</div>
 @endsection
