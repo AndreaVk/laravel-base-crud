@@ -9,33 +9,33 @@
         @method("PUT")
   <div class="form-group">
     <label for="title">Title</label>
-    <input type="text" class="form-control" id="title" placeholder="Title" name="title">
+    <input type="text" class="form-control" id="title" placeholder="Title" name="title" value="{{$comic->title}}"
   </div>
     <div class="form-group">
     <label for="sale_date">Sale date</label>
-    <input type="text" class="form-control" id="sale_date" placeholder="Sale date" name="sale_date">
+    <input type="text" class="form-control" id="sale_date" placeholder="Sale date" name="sale_date" value="{{$comic->sale_date}}">
   </div>
     <div class="form-group">
     <label for="thumb">Thumb</label>
-    <input type="text" class="form-control" id="thumb" placeholder="Inserisci l'immagine" name="thumb">
+    <input type="text" class="form-control" id="thumb" placeholder="Inserisci l'immagine" name="thumb" value="{{$comic->thumb}}">
   </div>
       <div class="form-group">
     <label for="description">description</label>
-    <input type="text" class="form-control" id="description" placeholder="Inserisci la descrizione" name="description">
+    <input type="text" class="form-control" id="description" placeholder="Inserisci la descrizione" name="description" value="{{$comic->description}}">
   </div>
       <div class="form-group">
     <label for="series">series</label>
-    <input type="text" class="form-control" id="series" placeholder="Inserisci la serie" name="series">
+    <input type="text" class="form-control" id="series" placeholder="Inserisci la serie" name="series" value="{{$comic->series}}">
   </div>
       <div class="form-group">
     <label for="type">type</label>
-    <input type="text" class="form-control" id="type" placeholder="Inserisci il tipo" name="type">
+    <input type="text" class="form-control" id="type" placeholder="Inserisci il tipo" name="type" value="{{$comic->type}}">
   </div>
       <label for="price">price</label>
-    <input type="number" class="form-control" id="price" placeholder="Inserisci il prezzo" name="price">
+    <input type="number" class="form-control" id="price" placeholder="Inserisci il prezzo" name="price" value="{{$comic->price}}">
   </div>
   
-  <button type="submit" class="btn btn-danger mx-2 mt-5">Create</button>
+  <button type="submit" class="btn btn-danger mx-2 mt-5">Edit</button>
 </form>
 </div>
 @endsection

@@ -24,6 +24,13 @@
             <td>{{$item["series"]}}</td>
             <td>
                 <a href="{{route("comics.show", $item["id"])}}"><button type="button" class="btn btn-primary">Visualizza</button></a>
+                <a href="{{route("comics.edit", $item["id"])}}"><button type="button" class="btn btn-warning mt-2">Edit</button></a>
+                <form action="{{route("comics.destroy", $item["id"])}}" method="POST">
+                    @csrf
+                    @method("DELETE")
+                    <button type="submit" class="btn btn-danger mt-2">Delete</button>
+                </form>
+                
             </td>
         </tr>
     @endforeach
