@@ -3,9 +3,10 @@
 @section('pageContent')
     
     <div class="container">
-    <h1 class="text-center my-2">Create new Comic</h1>
-    <form action="{{route("comics.store")}}" method="POST">
+    <h1 class="text-center my-2">Edit Comic: {{$comic->title}}</h1>
+    <form action="{{route("comics.update", $comic->id)}}" method="POST">
         @csrf
+        @method("PUT")
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" id="title" placeholder="Title" name="title">
