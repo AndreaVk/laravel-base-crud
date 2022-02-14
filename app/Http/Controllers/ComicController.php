@@ -39,12 +39,12 @@ class ComicController extends Controller
         $data = $request->all();
         //validazione
         $request->validate([
-        "title"=>"required|string|max:50",
+        "title"=>"required|string|max:50|unique:comics",
         "description"=>"required|string|max:800",
         "series"=>"required|string|max:60",
         "thumb"=>"nullable|url",
         "sale_date"=>"required|date",
-        "type"=>"required!string|max:40",
+        "type"=>"required|string|max:40",
         "price"=>"required|numeric"
         ]);
         $newComic = Comic::create($data);
