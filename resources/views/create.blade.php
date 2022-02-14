@@ -8,42 +8,60 @@
         @csrf
   <div class="form-group">
     <label for="title">Title</label>
-    <input type="text" class="form-control" id="title" placeholder="Title" name="title">
+    <input type="text" class="form-control"  @error('title') is-invalid @enderror id="title" placeholder="Title" name="title" value="{{old("title")}}">
+    @error ('title')
+      <div class="alert alert-danger mt-2">{{$message}}</div>
+    @enderror
   </div>
     <div class="form-group">
     <label for="sale_date">Sale date</label>
-    <input type="text" class="form-control" id="sale_date" placeholder="Sale date" name="sale_date">
+    <input type="text" class="form-control"  @error('sale_date') is-invalid @enderror id="sale_date" placeholder="Sale date" name="sale_date" value="{{old("sale_date")}}">
+
+    @error ('sale_date')
+      <div class="alert alert-danger mt-2">{{$message}}</div>
+    @enderror
   </div>
     <div class="form-group">
     <label for="thumb">Thumb</label>
-    <input type="text" class="form-control" id="thumb" placeholder="Inserisci l'immagine" name="thumb">
+    <input type="text" class="form-control"  @error('thumb') is-invalid @enderror id="thumb" placeholder="Inserisci l'immagine" name="thumb" value="{{old("thumb")}}" >
+    
+    @error ('thumb')
+      <div class="alert alert-danger mt-2">{{$message}}</div>
+    @enderror
   </div>
       <div class="form-group">
     <label for="description">description</label>
-    <input type="text" class="form-control" id="description" placeholder="Inserisci la descrizione" name="description">
+    <input type="text" class="form-control"  @error('description') is-invalid @enderror id="description" placeholder="Inserisci la descrizione" name="description" value="{{old("description")}}">
+
+    @error ('description')
+      <div class="alert alert-danger mt-2">{{$message}}</div>
+    @enderror
   </div>
       <div class="form-group">
     <label for="series">series</label>
-    <input type="text" class="form-control" id="series" placeholder="Inserisci la serie" name="series">
+    <input type="text" class="form-control"  @error('series') is-invalid @enderror id="series" placeholder="Inserisci la serie" name="series" value="{{old("series")}}">
+
+    @error ('series')
+      <div class="alert alert-danger mt-2">{{$message}}</div>
+    @enderror
   </div>
       <div class="form-group">
     <label for="type">type</label>
-    <input type="text" class="form-control" id="type" placeholder="Inserisci il tipo" name="type">
+    <input type="text" class="form-control"  @error('type') is-invalid @enderror id="type" placeholder="Inserisci il tipo" name="type" value="{{old("type")}}">
+
+    @error ('type')
+      <div class="alert alert-danger mt-2">{{$message}}</div>
+    @enderror
   </div>
       <label for="price">price</label>
-    <input type="number" class="form-control" id="price" placeholder="Inserisci il prezzo" name="price">
+    <input type="number" class="form-control"  @error('price') is-invalid @enderror id="price" placeholder="Inserisci il prezzo" name="price" value="{{old("price")}}">
+
+    @error ('price')
+      <div class="alert alert-danger mt-2">{{$message}}</div>
+    @enderror
   </div>
   
   <button type="submit" class="btn btn-danger mx-2 mt-5">Create</button>
 </form>
-@if ($errors->any())
-    <div class="alert alert-danger mt-2">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
 </div>
 @endsection
