@@ -4,6 +4,9 @@
     
     <div class="container">
     <h1 class="text-center my-2">Create new Comic</h1>
+    <div class="mb-2">
+    <a href="{{route("comics.index")}}"><button type="button" class="btn btn-primary">Ritorna alla Lista</button></a>  
+    </div>
     <form action="{{route("comics.store")}}" method="POST">
         @csrf
   <div class="form-group">
